@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include_once 'php/calculations.php' ?>
 <html lang="en">
 
 <head>
@@ -58,15 +58,34 @@
                 <h2 class="content__header">
                     Результат вычислений
                 </h2>
-                <div class="content__result">
-                    Медиана из точки A: <span>48</span>
-                </div>
-                <div class="content__result">
-                    Медиана из точки B: <span>48</span>
-                </div>
-                <div class="content__result">
-                    Медиана из точки C: <span>48</span>
-                </div>
+                <?php 
+                    if (empty($_GET)) {
+                        echo '';
+                    }
+                    else {
+                        echo '
+                            <div class="content__result">
+                                Медиана из точки A(' . $_GET['ax'] . ',' . $_GET['ay'] . ') равна <span>' .
+                                    calc($_GET['ax'], $_GET['ay'], $_GET['bx'], $_GET['by'], $_GET['cx'], $_GET['cy'])
+                                . '</span>
+                            </div>
+                        ';
+                        echo '
+                            <div class="content__result">
+                                Медиана из точки B(' . $_GET['bx'] . ',' . $_GET['by'] . ') равна <span>' .
+                                    calc($_GET['bx'], $_GET['by'], $_GET['cx'], $_GET['cy'], $_GET['ax'], $_GET['ay'])
+                                . '</span>
+                            </div>
+                        ';
+                        echo '
+                            <div class="content__result">
+                                Медиана из точки C(' . $_GET['cx'] . ',' . $_GET['cy'] . ') равна <span>' .
+                                    calc($_GET['cx'], $_GET['cy'], $_GET['bx'], $_GET['by'], $_GET['ax'], $_GET['ay'])
+                                . '</span>
+                            </div>
+                        ';
+                    }
+                ?>
             </div>
         </div>
     </main>
