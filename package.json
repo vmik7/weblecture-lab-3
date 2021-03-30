@@ -1,0 +1,19 @@
+{
+  "name": "weblecture-lab-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmik7/weblecture-lab-3.git"
+  },
+  "author": "vmik7 <vmik7@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmik7/weblecture-lab-3/issues"
+  },
+  "homepage": "https://github.com/vmik7/weblecture-lab-3#readme"
+}
